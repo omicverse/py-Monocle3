@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pymonocle3-bio"
+version = "0.1.0"
+description = "omicverse-facing wrapper for Bio-Babel/Monocle3-python — Python port of R monocle3."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Zehua Zeng", email = "starlitnightly@163.com" }]
+keywords = ["single-cell", "scRNA-seq", "monocle3", "trajectory", "pseudotime"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Artistic License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "monocle3-python>=1.4.26",
+]
+
+[project.urls]
+Homepage = "https://github.com/omicverse/py-Monocle3"
+Repository = "https://github.com/omicverse/py-Monocle3"
+Upstream = "https://github.com/Bio-Babel/Monocle3-python"
+"R package" = "https://github.com/cole-trapnell-lab/monocle3"
+
+[tool.setuptools.packages.find]
+include = ["pymonocle3*"]
+exclude = ["tests*", "examples*"]
